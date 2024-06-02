@@ -6,15 +6,16 @@
 @LT$qi PROC
 	push bp
 	mov bp, sp
-	mov cx, [bp + 6] 	; Giá trị biến n đưa vào cx
+	mov bx, [bp + 6] 	; bx = a (lấy giá trị a trong stack đưa vào bx) 
+	mov cx, _n 			; cx = n 
 	mov ax, 1 			; Tích nằm trong ax 
-	cmp cx, 2 			; Loại trừ trường hợp n = 0, 1
-	jb L3
+	and cx, cx 			; Dựng cờ để xét liệu n có bằng 0
+	jz L2 				; Nếu n = 0 thì nhảy đến L2 
+	L1:
+		mul bx 			; còn n # 0 thì tiến hành vòng lặp tính a mũ n 
+		loop L1
 	L2:
-		mul cx 			; ax * cx -> dx:ax (dx = 0)
-		loop L2
-	L3:
-		pop bp
+		pop bp 			; Hồi phục giá trị của bp
 		ret 
 @LT$qi ENDP
 	END

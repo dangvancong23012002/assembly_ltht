@@ -4,6 +4,9 @@
 - luythua.asm -> a lũy thừa n (Bài 1)
 ## Các bài tập liên kết với ngôn ngữ bậc cao (c++)
 - thsn.cpp -> tổng hai số nguyên 
-- altn1.cpp, altn2.asm -> a lũy thừa n (Bài 1) (Lưu ý phải đặt 2 tên file khác nhau thì sẽ không gặp lỗi)
-- gtn1.cpp, gtn2.asm - n giai thừa (Bài 2)
+- lt1.cpp, lt2.asm -> a lũy thừa n (Bài 1) (Lưu ý phải đặt 2 tên file khác nhau thì sẽ không gặp lỗi)
+- lt11.cpp, lt22.cpp -> a lũy thừa n (Bài 1) Cách 2
+- lt111.cpp, lt222.cpp -> a lũy thừa n (Bài 1) Cách 3
+- gtn1.cpp, gtn2.asm - n giai thừa (Bài 2) Cách 1
+- gtn11.cpp, gtn22.asm -> n giai thừa (Bài 2) Cách 2
 
