@@ -1,11 +1,12 @@
 #include <iostream.h>
 #include <conio.h>
 int a,n;
-extern int LT();
+extern int LT(int i1);
 void main(void)
 {
 	char tl;
 	L1:
+	int a;
 		clrscr();
 		cout << "\nLIEN KET VOI NGON NGU BAC CAO(C++)";
 		cout << "\n----------------------------------";
@@ -16,11 +17,11 @@ void main(void)
 		cout << "\n - Goi ham tinh a mu n do Assembly viet va hien ket qua";
 		cout << "\n* Module Assembly: Viet ham tinh a mu n.";
 		cout << "\n\n-----------------------------------";
-		cout << "\nCach 1: Ham Assembly khong co doi";
+		cout << "\nCach 2: Ham Assembly co 1 doi. Gia tri bien a la tham so thuc cua ham \n(se duoc dua vao ngan xep, con n van la bien \ntoan cuc.";
 		cout << "\n----------CHUONG TRINH-------------";
 		cout << "\nHay vao a : "; cin >> a;
 		cout << "Hay vao n : "; cin >> n;
-		cout << a << " luy thua " << n << " la : " << LT();
+		cout << a << " luy thua " << n << " la : " << LT(a);
 		cout << "\n-----------------------------------";
 	cout << "\nCo tiep tuc(c/k)?";
 	tl = getch();

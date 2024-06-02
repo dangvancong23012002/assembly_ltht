@@ -2,10 +2,12 @@ INCLUDE lib1.asm
 .MODEL small 				; Mô hình bộ nhớ cho chương trình dạng small
 .STACK 100h 				; Dành một vùng nhớ 256 byte cho ngăn xếp
 .DATA 						; Dành một vùng nhớ để cấp phát cho biến (Chỉ có khi chương trình có khai báo biến)
-	m1 	db 13, 10, '-------- CAC BAI TAP NGON NGU ASSEMBLY THUAN TUY --------'
+	m1 	db 13, 10, 'CAC BAI TAP NGON NGU ASSEMBLY THUAN TUY'
+		db 13, 10, '------------------***------------------'
 		db 13, 10, 13, 10, 'Bai 1:'
 		db 13, 10, 'a luy thua n (voi a la so nguyen va n la so nguyen duong)'
-		db 13, 10, 13, 10, '-------------------------***-----------------------------'
+		db 13, 10, 13,10, '---------------------------------------'
+		db 13, 10, 13,10, '------------ CHUONG TRINH -------------'
 		db 13, 10, 13, 10, 'Hay vao a: $'
 	m2 db 13, 10, 'Hay vao n: $'
 	crtf db 13, 10, '$'
