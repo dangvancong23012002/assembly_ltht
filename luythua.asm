@@ -14,6 +14,7 @@ INCLUDE lib1.asm
 	m3 db ' luy thua $'
 	m4 db ' la: $'
 	m5 db 13, 10, 'Co tiep tuc (c/k)? $'
+	m6 db 13, 10, 'Chuoi vua nhap la: $'
 .CODE
 PS:
 	mov ax, @data 			; Đưa phần địa chỉ segment vùng nhớ dành cho dữ liệu
@@ -40,12 +41,28 @@ PS:
 		loop LAP
 	HIEN:
 		call HIEN_SO_N 		; Hiện giá trị a luy thua n (giá trị có trong ax )
+		
+		xor ax, ax ; Làm sạch các thanh ghi ax, cx 
+		xor cx, cx 
 	CONTINUE:
-		HienString m5 		; Hiện dòng nhắc
+		;HienString m5 		; Hiện dòng nhắc
 		mov ah, 1 			; Chờ nhận một ký tự từ bàn phím
 		int 21h 
+		
+		cmp al, 0dh ; so sánh với phím enter
+		je Print
+		push ax 
+		inc cx 
+		jmp CONTINUE ; Lặp lệnh nhập
+		
+		Print:
+			pop dx
+			mov ah, 2
+			int 21h
+			loop Print
+		
 		cmp al, 'c' 		; Ký tự vừa nhận có phải là 'c'
-		jne Exit 			; Nếu không phải thì nhảy đến nhã Exit 
+		jne Exit 			; Nếu không phải thì nhảy đến mã Exit 
 		jmp PS 				; Còn không thì quay về đầu (bắt đầu lại chương trình)
 	Exit:
 		mov ah, 4ch 		; Về DOS
