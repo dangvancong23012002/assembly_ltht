@@ -17,5 +17,7 @@
 - gtn11.cpp, gtn22.asm 		-> n giai thừa (Bài 2) Cách 2
 - tbc1.cpp, tbc2.asm 		-> tính trung bình cộng hai số nguyên (Bài 3) Cách 1
 - tbc11.cpp, tbc22.asm 		-> tính trung bình cộng hai số nguyên (Bài 3) Cách 2
+- tbc111.cpp, tbc222.asm 	-> tính trung bình cộng hai số nguyên (Bài 3) Cách 3
+
 
 

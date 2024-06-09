@@ -14,7 +14,7 @@ void main(void) {
 		cout << "\n* Module C++: ";
 		cout << "\n - Nhan gia tri so thu 1 va so thu 2.";
 		cout << "\n - Goi ham tinh trung binh cong do Assembly viet va hien ket qua.";
-		cout << "\n* Module C++: Viet ham tinh trung binh cong.";
+		cout << "\n* Module Assembly: Viet ham tinh trung binh cong.";
 		cout << "\n\n----------------------------------";
 		cout << "\nCach 2: Ham Assembly co hai doi (gia tri so1, so2 \nla tham so thuc - cat vao stack, con flag khai bao bien toan cuc).";
 		cout << "\n\n---------- CHUONG TRINH ----------";
