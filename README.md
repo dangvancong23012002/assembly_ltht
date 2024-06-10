@@ -18,6 +18,7 @@
 - tbc1.cpp, tbc2.asm 		-> tính trung bình cộng hai số nguyên (Bài 3) Cách 1
 - tbc11.cpp, tbc22.asm 		-> tính trung bình cộng hai số nguyên (Bài 3) Cách 2
 - tbc111.cpp, tbc222.asm 	-> tính trung bình cộng hai số nguyên (Bài 3) Cách 3
+- tdsn1.cpp, tdsn2.asm 		-> Tính tổng một dãy số nguyên (Bài 4) Cách 1
 
 
 
