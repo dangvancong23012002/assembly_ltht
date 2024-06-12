@@ -4,6 +4,9 @@
 int n, a[100];
 extern int SUM();
 extern int SUM_NEG();
+extern int SUM_POSITIVE();
+extern int SUM_EVEN();
+extern int SUM_ODD();
 void main(void) {
 	char tl;
 	L1:
@@ -28,6 +31,9 @@ void main(void) {
 		}
 		cout << "Tong day so nguyen la: " << SUM();
 		cout << "\nTong cac thanh phan am cua day so nguyen la: " << SUM_NEG();
+		cout << "\nTong cac thanh phan duong cua day so nguyen la: " << SUM_POSITIVE();
+		cout << "\nTong cac thanh phan chan cua day so nguyen la: " << SUM_EVEN();
+		cout << "\nTong cac thanh phan le cua day so nguyen la: " << SUM_ODD();
 		cout << "\n-----------------------------------";
 	cout << "\nCo tiep tuc chuong trinh (c/k) khong?";
 	tl = getch();

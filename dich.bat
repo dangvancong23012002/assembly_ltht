@@ -1,1 +1,1 @@
-c:\tc\bin\tcc -ml -Ic:\tc\include -Lc:\tc\lib %1 %2 %3
+c:\tc\bin\tcc -ml -Ic:\tc\include -Lc:\tc\lib %1 %2 %3 %4 %5 %6
