@@ -7,6 +7,7 @@
 - test2.asm 	-> Kiểm tra bài 2 ngày 5/6/2024 
 - test3.asm 	-> Kiểm tra Bài 3 ngày 5/6/2024
 ## Các bài tập liên kết với ngôn ngữ bậc cao (c++)
+- demo1.cpp, gtnn1.asm, gtnn2.asm, gtnn3.asm -> Tìm giá trị nhỏ nhất của mảng, vị trí giá trị bé nhất, sắp xếp giảm
 - thsn.cpp -> tổng hai số nguyên 
 - slpt1.cpp, sltp2.asm 		-> Tìm số lượng thành phần của dãy số nguyên có giá trị nằm trong khoảng [-100; 100] (Cách 1)
 - sltp11.cpp, sltp22.asm 	-> Tìm số lượng thành phần của dãy số nguyên có giá trị nằm trong khoảng [-100; 100] (Cách 2)
@@ -18,7 +19,7 @@
 - tbc1.cpp, tbc2.asm 		-> tính trung bình cộng hai số nguyên (Bài 3) Cách 1
 - tbc11.cpp, tbc22.asm 		-> tính trung bình cộng hai số nguyên (Bài 3) Cách 2
 - tbc111.cpp, tbc222.asm 	-> tính trung bình cộng hai số nguyên (Bài 3) Cách 3
-- tdsn1.cpp, tdsn2.asm, tadsn2.asm, tddsn2.asm, tcdsn2.asm, tldsn2.asm 		-> Tính tổng một dãy số nguyên, tổng âm một dãy số nguyên, tổng dương của dãy số nguyên, tổng chẵn của dãy số nguyên, tổng lẻ của dãy số nguyên (Bài 4) Cách 1
-
-
+- tdsn1.cpp, tdsn2.asm, tadsn2.asm, 
+tddsn2.asm, tcdsn2.asm, tldsn2.asm 		-> Tính tổng một dãy số nguyên, tổng âm một dãy số nguyên, tổng dương của dãy số nguyên, tổng chẵn của dãy số nguyên, tổng lẻ của dãy số nguyên (Bài 4) Cách 1
+- tdsn11.cpp, tdsn22.asm, sln22.asm -> Tính tổng một dãy số nguyên, số lơn nhất của dãy số nguyên (Bài 4) Cách 2
 
