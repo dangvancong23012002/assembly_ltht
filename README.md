@@ -3,6 +3,7 @@
 ## Các bài tập Assembly thuần túy
 - luythua.asm 	-> a lũy thừa n (Bài 1)
 - demo1.asm 	-> Bài demo trên lớp ngày 5/6/2024
+- demo2.asm 	-> Thực hành trên lớp (Bài tập có ổ mềm) 
 - test1.asm 	-> Kiểm tra bài 1 ngày 5/6/2024
 - test2.asm 	-> Kiểm tra bài 2 ngày 5/6/2024 
 - test3.asm 	-> Kiểm tra Bài 3 ngày 5/6/2024
@@ -21,5 +22,9 @@
 - tbc111.cpp, tbc222.asm 	-> tính trung bình cộng hai số nguyên (Bài 3) Cách 3
 - tdsn1.cpp, tdsn2.asm, tadsn2.asm, 
 tddsn2.asm, tcdsn2.asm, tldsn2.asm 		-> Tính tổng một dãy số nguyên, tổng âm một dãy số nguyên, tổng dương của dãy số nguyên, tổng chẵn của dãy số nguyên, tổng lẻ của dãy số nguyên (Bài 4) Cách 1
-- tdsn11.cpp, tdsn22.asm, sln22.asm -> Tính tổng một dãy số nguyên, số lơn nhất của dãy số nguyên (Bài 4) Cách 2
+- tdsn11.cpp, tdsn22.asm, sln22.asm 	-> Tính tổng một dãy số nguyên, số lơn nhất của dãy số nguyên (Bài 4) Cách 2
+## Các bài tập lập trình hệ thống liên kết với ngôn ngữ bậc cao
+- dospg.cpp -> lập trình trên môi trường DOS
+- omem.asm -> Máy tính có ổ mềm không  
+- card.asm -> Card điều khiển màn hình 
 
