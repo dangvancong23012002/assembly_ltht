@@ -1,8 +1,13 @@
 #include <iostream.h>
 #include <conio.h>
 
+extern COM();
 extern CARD();
 extern OMEM();
+extern DMA();
+extern kRAM();
+extern JOYS();
+extern FPU();
 extern Exit();
 void main(void) {
 	char tl;
@@ -24,19 +29,46 @@ void main(void) {
 			clrscr();
 			cout << "\n\t\tCAC BAI TAP";
 			cout << "\n\t-------------------------";
-			cout << "\n\t1. So luong cong COM va dia chi.";
-			cout << "\n\t2. So luong o mem.";
-			cout << "\n\t3. Loai card dieu khien man hinh.";
+			cout << "\n\t1. So luong cong COM va dia chi?";
+			cout << "\n\t2. So luong cong LPT va dia chi?";
+			cout << "\n\t3. Lieu may tinh co FPU khong?";
+			cout << "\n\t4. So luong o mem?";
+			cout << "\n\t5. May tinh co kRAM tren mainboad khong?";
+			cout << "\n\t6. Lieu may tinh co cong may in noi tiep?";
+			cout << "\n\t7. May tinh co cong joystick khong?";
+			cout << "\n\t8. May tinh co DMA khong?";
+			cout << "\n\t9. Loai card dieu khien man hinh.";
 			cout << "\n\t99. Thoat chuong trinh.";
 			cout << "\n\t-------------------------";
 			cout << "\n\tLua chon cua ban: "; cin >> cn;
 			switch(cn) {
 				case 1: 
+					COM();
 					break;
 				case 2:
-					OMEM();
+					cout << "Chuong trinh duoc dich o mot file khac!!!";
+					cout << "\n(Gioi han file dich la 9 file).";
 					break;
 				case 3:
+					FPU();
+					break;
+				case 4:
+					OMEM();
+					break;
+				case 5:
+					kRAM();
+					break;
+				case 6:
+					cout << "Chuong trinh duoc dich o mot file khac!!!";
+					cout << "\n(Gioi han file dich la 9 file).";
+					break;
+				case 7:
+					JOYS();
+					break;
+				case 8:
+					DMA();
+					break;
+				case 9:
 					CARD();
 					break;
 				case 99:

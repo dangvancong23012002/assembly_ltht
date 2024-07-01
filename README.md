@@ -27,4 +27,11 @@ tddsn2.asm, tcdsn2.asm, tldsn2.asm 		-> Tính tổng một dãy số nguyên, t�
 - dospg.cpp -> lập trình trên môi trường DOS
 - omem.asm -> Máy tính có ổ mềm không  
 - card.asm -> Card điều khiển màn hình 
+- com.asm -> Máy tính có cổng COM không
+- kRAM.asm -> Máy tính có thêm kRAM trên mainboard
+- joys.asm -> Có cổng joystick không
+- print.asm -> Cổng máy in nối tiếp
+- fpu.asm -> Cổng FPU
+## Các lệnh dịch
+dich dospg.cpp com.asm fpu.asm omem.asm kRAM.asm joys.asm dma.asm card.asm exit.asm
 
