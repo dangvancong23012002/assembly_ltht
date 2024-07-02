@@ -35,7 +35,7 @@ void main(void) {
 			cout << "\n\t4. So luong o mem?";
 			cout << "\n\t5. May tinh co kRAM tren mainboad khong?";
 			cout << "\n\t6. Lieu may tinh co cong may in noi tiep?";
-			cout << "\n\t7. May tinh co cong joystick khong?";
+			cout << "\n\t7. May tinh co cong joystick(can dieu khien) khong?";
 			cout << "\n\t8. May tinh co DMA khong?";
 			cout << "\n\t9. Loai card dieu khien man hinh.";
 			cout << "\n\t99. Thoat chuong trinh.";
