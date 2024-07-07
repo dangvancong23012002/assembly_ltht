@@ -23,6 +23,11 @@
 - tdsn1.cpp, tdsn2.asm, tadsn2.asm, 
 tddsn2.asm, tcdsn2.asm, tldsn2.asm 		-> Tính tổng một dãy số nguyên, tổng âm một dãy số nguyên, tổng dương của dãy số nguyên, tổng chẵn của dãy số nguyên, tổng lẻ của dãy số nguyên (Bài 4) Cách 1
 - tdsn11.cpp, tdsn22.asm, sln22.asm 	-> Tính tổng một dãy số nguyên, số lơn nhất của dãy số nguyên (Bài 4) Cách 2
+## Các bài tập về mảng
+- mang.cpp -> Tệp chính
+- sum.asm -> Tổng các thành phần của mảng 
+- osum.asm -> Tổng các thành phần lẻ của mảng 
+- mang.cpp osum.asm 
 ## Các bài tập lập trình hệ thống liên kết với ngôn ngữ bậc cao
 - dospg.cpp -> lập trình trên môi trường DOS
 - omem.asm -> Máy tính có ổ mềm không  
