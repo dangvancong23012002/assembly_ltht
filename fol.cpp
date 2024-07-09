@@ -1,6 +1,9 @@
 #include <iostream.h>
 #include <conio.h>
 
+extern CRE_DIR();
+extern REM_DIR();
+extern Exit();
 void main(void) {
 	char tl;
 	int chon;
@@ -17,14 +20,17 @@ void main(void) {
 		cout << "\n\tLua chon cua ban: "; cin >> chon;
 		switch(chon) {
 			case 1:
+				CRE_DIR();
 				break;
 			case 2:
+				REM_DIR();
 				break;
 			case 3:
 				break;
 			case 4: 
 				break;
 			case 5:
+				Exit();
 				break;
 			default:
 				cout << "\n\tLua chon khong dung!!!";
