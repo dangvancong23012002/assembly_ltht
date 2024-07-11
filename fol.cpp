@@ -3,6 +3,7 @@
 
 extern CRE_DIR();
 extern REM_DIR();
+extern MOV_DIR();
 extern Exit();
 void main(void) {
 	char tl;
@@ -26,6 +27,7 @@ void main(void) {
 				REM_DIR();
 				break;
 			case 3:
+				MOV_DIR();
 				break;
 			case 4: 
 				break;

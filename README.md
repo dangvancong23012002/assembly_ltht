@@ -27,6 +27,8 @@ tddsn2.asm, tcdsn2.asm, tldsn2.asm 		-> Tính tổng một dãy số nguyên, t�
 - fol.cpp -> Tệp chính
 - cdir.asm -> Tạo thư mục 
 - rdir.asm -> Xóa thư mục rỗng 
+- mdir.asm -> Chuyển thư mục 
+- Lệnh dịch: fol.cpp cdir.asm rdir.asm mdir.asm exit.asm 
 ## Các bài tập về mảng
 - mang.cpp -> Tệp chính
 - sum.asm -> Tổng các thành phần của mảng 
