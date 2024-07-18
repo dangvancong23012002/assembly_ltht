@@ -35,6 +35,7 @@ tddsn2.asm, tcdsn2.asm, tldsn2.asm 		-> Tính tổng một dãy số nguyên, t�
 - osum.asm -> Tổng các thành phần lẻ của mảng 
 - psum.asm -> Tổng các thành phần dương của mảng 
 - minarr.asm -> Giá trị nhỏ nhất của mảng 
+- maxarr.asm -> Giá trị lớn nhất của mảng 
 - Lệnh dịch: mang.cpp osum.asm 
 ## Các bài tập lập trình hệ thống liên kết với ngôn ngữ bậc cao
 - dospg.cpp -> lập trình trên môi trường DOS

@@ -2,26 +2,26 @@ INCLUDE lib1.asm
 .MODEL small
 .STACK 100h
 .DATA
-	m1 	db 13, 10, '	    TIM GIA TRI NHO NHAT CUA MANG'
+	m1 	db 13, 10, '	   TIM GIA TRI LON NHAT CUA MANG'
 		db 13, 10, '	------------------------------------'
 		db 13, 10, '	Hay vao so luong thanh phan: $'
 	m2 db 13, '	a[$'
 	m3 db ']=$'
 	m4 db 13, '	Day so vua nhap la: $'
 	space db ' $'
-	m5 db 13, 10, '	So be nhat trong day so nguyen la: $'
-	m6 db 13, 10, '	Vi tri be nhat la: $'
-	m7 db 13, 10, '	Day so duoc sap xep tang dan la: $'
+	m5 db 13, 10, '	So lon nhat trong day so nguyen la: $'
+	m6 db 13, 10, '	Vi tri lon nhat la: $'
+	m7 db 13, 10, '	Day so duoc sap xep giam dan: $'
 	tieptuc db 13, 10, '	------------------------------------'
 			db 13, 10, '	Co tiep tuc chuong trinh khong(c/k)? $'
 	slpt dw ?
 	i dw ?
 	a dw 100 dup(?)
-	min_value dw ?
-	min_index dw ?
+	max_value dw ?
+	max_index dw ?
 .CODE
-	PUBLIC @MIN_ARR$qv
-@MIN_ARR$qv PROC
+	PUBLIC @MAX_ARR$qv
+@MAX_ARR$qv PROC
 		mov ax, @data 
 		mov ds, ax 
 		
@@ -61,58 +61,58 @@ INCLUDE lib1.asm
 		loop L_CT2
 	
 	;-------------------------------------------------------------------------------------
-	; Tìm số bé nhất
+	; Tìm số lớn nhất
 		HienString m5
 		lea bx, a 
 		mov cx, slpt
-		mov ax, [bx] ; Giả sử phần tử đầu tiên là nhỏ nhất 
-		mov min_value, ax 
+		mov ax, [bx] ; Giả sử phần tử đầu tiên là lớn nhất 
+		mov max_value, ax 
 		dec cx
 		add bx, 2 ; bx trỏ đến phần tử thứ 2
 		
 	L_CT3:
 		mov ax, [bx] 
-		cmp ax, min_value ; So sánh a[i] với a[i++]
+		cmp max_value, ax ; So sánh max với a[i++]
 		jge L_CT4
-		mov min_value, ax 
+		mov max_value, ax 
 		
 	L_CT4:
 		add bx, 2
 		loop L_CT3
 		
-	; Hiện giá trị nhỏ nhất
-		mov ax, min_value ; Lấy giá trị min ra khỏi vòng lặp rồi hiện
+	; Hiện giá trị lớn nhất 
+		mov ax, max_value ; Lấy giá trị max ra khỏi vòng lặp rồi hiện
 		call HIEN_SO_N
 		
 	;-------------------------------------------------------------------------------------
-	; Tìm vị trí nhỏ nhất 
+	; Tìm vị trí lớn nhất 
 		HienString m6
 		lea bx, a 
 		mov cx, slpt
-		mov ax, [bx] ; Giá trị đầu là bé nhất 
-		mov min_value, ax 
-		mov min_index, 0
-		dec cx 
+		mov ax, [bx]
+		mov max_value, ax 
+		mov max_index, 0
+		dec cx
 		add bx, 2 
-		mov dx, 1 ; vị trí 2 
+		mov dx, 1 
 		
 	L_CT5:
-		mov ax, [bx] ; ax = a[i++]
-		cmp ax, min_value ; So sánh a[i++] với min_value
-		jge L_CT6 ; Nếu >= thì nhảy 
-		mov min_index, dx 
+		mov ax, [bx]
+		cmp max_value, ax ; So sánh max_value với a[i++]
+		jge L_CT6 ; Nếu max >= a[i++] thì nhảy
+		mov max_index, dx ; Ngược lại thì gán vị trí max vào dx
 		
 	L_CT6:
-		add bx, 2 
+		add bx, 2
 		inc dx 
 		loop L_CT5
 		
-	; Hiện vị trí nhỏ nhất 
-		mov ax, min_index
+	; Hiện vị trí lớn nhất 
+		mov ax, max_index
 		call HIEN_SO_N
-	
-	;-------------------------------------------------------------------------------------
-	; Sắp xếp dãy số theo chiều tăng dần
+		
+	;-------------------------------------------------------------------------------------	
+	; Sắp xếp dãy số theo chiều giảm dần
 		mov ax, slpt
 		mov i, ax 
 		dec i 
@@ -125,18 +125,18 @@ INCLUDE lib1.asm
 	L_CT8:
 		mov ax, [bx]
 		mov dx, [bx + 2] ; dx = a[i + 1]
-		cmp dx, ax ; So sánh a[i++] với a[i]
-		jge L_CT9 ; Nếu a[i++] >= a[i] thì nhảy, ngược lại thì đổi chéo giá trị ax, dx 
-		mov [bx], dx ; dx = giá trị lớn 
-		mov [bx + 2], ax ; ax = giá trị nhỏ
+		cmp ax, dx ; So sánh a[i] với a[i++]
+		jge L_CT9 ; Nếu a[i] >= a[i++] thì nhảy ngược lại thì đổi chéo giá trị 
+		mov [bx], dx ; dx = giá trị nhỏ 
+		mov [bx + 2], ax ; ax = giá trị lớn
 		
 	L_CT9:
 		add bx, 2 
 		loop L_CT8
 		dec i 
-		jnz L_CT7 ; Nhảy để thay đổi các vị trí sắp xếp
+		jnz L_CT7
 		
-	; Vòng lặp đưa các số sắp xếp ra màn hình 
+	; Vòng lặp đưa các số sắp xếp ra màn hình
 		HienString m7
 		mov cx, slpt
 		lea bx, a 
@@ -147,7 +147,7 @@ INCLUDE lib1.asm
 		HienString space
 		add bx, 2
 		loop L_CT10
-	
+		
 	;-------------------------------------------------------------------------------------
 	CONTINUE:
 		HienString tieptuc
@@ -163,5 +163,5 @@ INCLUDE lib1.asm
 	ret
 	
 INCLUDE lib2.asm 
-@MIN_ARR$qv ENDP
+@MAX_ARR$qv ENDP
 	END
