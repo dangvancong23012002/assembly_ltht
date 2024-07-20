@@ -16,13 +16,13 @@ INCLUDE lib1.asm
 	i dw ?
 	a dw 100 dup(?)
 .CODE
-	PUBLIC @POS_SUM@qv
-@POS_SUM@qv PROC
+	PUBLIC @POS_SUM_ARR@qv
+@POS_SUM_ARR@qv PROC
 		mov ax, @data 
 		mov ds, ax 
 		
 	L_CT0:
-		clrscr
+		CLRSCR
 		HienString m1
 		call VAO_SO_N
 		mov slpt, ax 
@@ -89,5 +89,5 @@ INCLUDE lib1.asm
 	ret
 	
 INCLUDE lib2.asm 
-@POS_SUM@qv ENDP
+@POS_SUM_ARR@qv ENDP
 	END

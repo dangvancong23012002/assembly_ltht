@@ -26,7 +26,7 @@ INCLUDE lib1.asm
 		mov ds, ax 
 		
 	L_CT0:
-		clrscr
+		CLRSCR
 		HienString m1 
 		call VAO_SO_N
 		mov slpt, ax 

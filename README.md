@@ -32,13 +32,15 @@ tddsn2.asm, tcdsn2.asm, tldsn2.asm 		-> Tính tổng một dãy số nguyên, t�
 ## Các bài tập về mảng
 - mang.cpp -> Tệp chính
 - sum.asm -> Tổng các thành phần của mảng 
-- osum.asm -> Tổng các thành phần lẻ của mảng 
-- psum.asm -> Tổng các thành phần dương của mảng 
 - nsum.asm -> Tổng các thành phần âm của mảng 
+- psum.asm -> Tổng các thành phần dương của mảng 
+- osum.asm -> Tổng các thành phần lẻ của mảng 
+- esum.asm -> Tổng các thành phần chẵn của mảng 
 - minarr.asm -> Giá trị nhỏ nhất của mảng 
-- maxarr.asm -> Giá trị lớn nhất của mảng 
-- Lệnh dịch: mang.cpp osum.asm 
-## Các bài tập lập trình hệ thống liên kết với ngôn ngữ bậc cao
+- maxarr.asm -> Giá trị lớn nhất của mảng
+- exit.asm -> Trở về DOS  
+- Lệnh dịch: mang.cpp sum.asm nsum.asm psum.asm osum.asm esum.asm minarr.asm maxarr.asm exit.asm  
+## Các bài tập lập trình hệ thống trên môi trường DOS
 - dospg.cpp -> lập trình trên môi trường DOS
 - omem.asm -> Máy tính có ổ mềm không  
 - card.asm -> Card điều khiển màn hình 
