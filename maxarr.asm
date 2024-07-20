@@ -11,7 +11,7 @@ INCLUDE lib1.asm
 	space db ' $'
 	m5 db 13, 10, '	So lon nhat trong day so nguyen la: $'
 	m6 db 13, 10, '	Vi tri lon nhat la: $'
-	m7 db 13, 10, '	Day so duoc sap xep giam dan: $'
+	m7 db 13, 10, '	Day so duoc sap xep giam dan la: $'
 	tieptuc db 13, 10, '	------------------------------------'
 			db 13, 10, '	Co tiep tuc chuong trinh khong(c/k)? $'
 	slpt dw ?
@@ -126,7 +126,7 @@ INCLUDE lib1.asm
 		mov ax, [bx]
 		mov dx, [bx + 2] ; dx = a[i + 1]
 		cmp ax, dx ; So sánh a[i] với a[i++]
-		jge L_CT9 ; Nếu a[i] >= a[i++] thì nhảy ngược lại thì đổi chéo giá trị 
+		jge L_CT9 ; Nếu a[i] >= a[i++] thì nhảy, ngược lại thì đổi chéo giá trị ax, dx 
 		mov [bx], dx ; dx = giá trị nhỏ 
 		mov [bx + 2], ax ; ax = giá trị lớn
 		
@@ -134,7 +134,7 @@ INCLUDE lib1.asm
 		add bx, 2 
 		loop L_CT8
 		dec i 
-		jnz L_CT7
+		jnz L_CT7 ; Nhảy để thay đổi các vị trí sắp xếp
 		
 	; Vòng lặp đưa các số sắp xếp ra màn hình
 		HienString m7
