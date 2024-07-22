@@ -7,6 +7,7 @@
 - test1.asm 	-> Kiểm tra bài 1 ngày 5/6/2024
 - test2.asm 	-> Kiểm tra bài 2 ngày 5/6/2024 
 - test3.asm 	-> Kiểm tra Bài 3 ngày 5/6/2024
+- age.asm -> Tính tuổi nhập 
 ## Các bài tập liên kết với ngôn ngữ bậc cao (c++)
 - demo1.cpp, gtnn1.asm, gtnn2.asm, gtnn3.asm -> Tìm giá trị nhỏ nhất của mảng, vị trí giá trị bé nhất, sắp xếp giảm
 - thsn.cpp -> tổng hai số nguyên 
