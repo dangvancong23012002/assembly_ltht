@@ -22,7 +22,7 @@ INCLUDE LIB1.asm
 		HienString m1 
 		call VAO_SO_N
 		cmp ax, 0
-		jl L_CT1 ; Nhảy có dấu (dấu âm - nhỏ hơn 0)
+		jl L_CT1 ; Nhảy có dấu (dấu âm - nhỏ hơn 0) 
 		cmp ax, 2024 
 		ja L_CT2
 		mov birth_year, ax 
