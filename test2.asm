@@ -1,64 +1,58 @@
+INCLUDE LIB1.asm
 .MODEL small
 .STACK 100h
 .DATA
-	Am db 13, 10, 'Nho hon 0 $'
-	Duong db 13, 10, 'Lon hon 0 $'
-	Khong db 13, 10, 'Bang 0 $'
+	so1 db 13, 10, '	       HIEU HAI SO'
+		db 13, 10, '	-----------oOo-----------'
+		db 13, 10, '	Nhap so 1: $'
+	so2 db 13, 10, '	Nhap so 2: $'
+	kq db 13, 10, '	Hieu hai so la: $'
+	Am db 13, 10, '	-> Hieu hai so nho hon 0! $'
+	Duong db 13, 10, '	-> Hieu hai so lon hon 0! $'
+	Khong db 13, 10, '	-> Hieu hai so bang 0! $'
+	buff 	dw 8
+			dw ?
+			dw 8 dup(?)
 .CODE
 PS:
-	mov ax, @data
-	mov ds, ax 
-	mov ax, 4
-	mov bx, 5
-	sub ax, bx 
-HIEN_SO:
-	mov  BX,10	; BX chua so chia la 10
-	xor  CX,CX	; So lan cat vao stack (luc dau = 0)
-	and  AX,AX	; Dung co dau SF
-	jns  HSN1	; Neu so can hien la duong thi nhay
-	push AX		; con khong thi cat AX vao stack
-	mov  AL,'-'	; Hien dau '-' ra man hinh
-	mov  AH,0eh
-	int  10h
-	pop  AX		; Hoi phuc lai so can hien tu stack vao AX
-	neg  AX		; Bu 2 de lay gia tri tuyet doi
-   HSN1:
-	xor  DX,DX	; DX=0
-	div  BX		; DX:AX chia cho BX (10)
-	add  DX,30h	; Chuyen so du tu dang so ra dang ASCII
-	push DX		; Cat vao stack
-	inc  CX		; Tang so lan cat vao stack len 1
-	and  AX,AX	; Dung co ZF (lieu thuong = 0)
-	jnz  HSN1	; Thuong # 0 thi nhay den tiep tuc qua trinh chia
-   HSN2:		; Vong lap lay cac gia tri co trong stack hien 
-	pop  AX		
-	mov  AH,0eh	; Chuc nang hien 1 ky tu dang ASCII o AL ra man hinh
-	int  10h
-	loop HSN2
-	
-	;cmp ax, 0
-	;jne Khong0
-	and ax, ax ; Giá trị là âm hay dương
-	jne Duong0
-	jmp Am0
-	
-	jne Exit
-	;jb Am0
+		mov ax, @data
+		mov ds, ax 
+		
+	L_CT0:
+		CLRSCR
+		HienString so1
+		call VAO_SO_N
+		mov bx, ax 
+		HienString so2
+		call VAO_SO_N
+		sub bx, ax 
+		cmp bx, 0
+		jg Duong0
+		jl Am0
+		je Khong0
+		
+	Khong0:
+		HienString kq
+		mov ax, bx
+		call HIEN_SO_N
+		HienString Khong
+		jmp Exit
 	
 	Duong0:
-		mov ah, 9
-		lea dx, Duong
-		int 21h
+		HienString kq
+		mov bx, ax 
+		call HIEN_SO_N
+		HienString Duong
+		jmp Exit
 	Am0:
-		mov ah, 9
-		lea dx, Am
-		int 21h
+		HienString kq
+		mov ax, bx
+		call HIEN_SO_N
+		HienString Am
 	
-	;Khong0:
-		;mov ah, 9
-		;lea	dx, Khong
-		;int 21h
 	Exit:
 		mov ah, 4ch
 		int 21h
+
+INCLUDE LIB5.asm 		
 END PS

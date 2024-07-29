@@ -8,6 +8,8 @@
 - test2.asm 	-> Kiểm tra bài 2 ngày 5/6/2024 
 - test3.asm 	-> Kiểm tra Bài 3 ngày 5/6/2024
 - age.asm -> Tính tuổi nhập 
+- mtest.asm -> Bài kiểm tra giữa kì 
+## Các bài tập về chuỗi 
 - name.asm -> Nhập tên (tối thiểu hai từ)
 - cap.asm -> Chuyển ký tự sang chữ hoa
 - upp_reg.asm -> Chuyển 1 chuỗi sang thường, hoa
