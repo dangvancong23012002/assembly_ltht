@@ -4,9 +4,11 @@
 - luythua.asm 	-> a lũy thừa n (Bài 1)
 - demo1.asm 	-> Bài demo trên lớp ngày 5/6/2024
 - demo2.asm 	-> Thực hành trên lớp (Bài tập có ổ mềm) 
-- test1.asm 	-> Kiểm tra bài 1 ngày 5/6/2024
-- test2.asm 	-> Kiểm tra bài 2 ngày 5/6/2024 
-- test3.asm 	-> Kiểm tra Bài 3 ngày 5/6/2024
+- test1.asm 	-> Kiểm tra bài 1 ngày 5/6/2024 (Số lớn nhất trong 2 số)
+- test2.asm 	-> Kiểm tra bài 2 ngày 5/6/2024 (Xét hiệu hai số)
+- test3.asm 	-> Kiểm tra Bài 3 ngày 5/6/2024 (Tổng từ 1 đến 100)
+- test4.asm 	-> Nhập vào số nguyên 0 <= x <= 9
+- test5.asm 	-> Tìm n nhỏ nhất, 1 + 2 + 3 + ... + n > 10000
 - age.asm -> Tính tuổi nhập 
 - mtest.asm -> Bài kiểm tra giữa kì 
 ## Các bài tập về chuỗi 
